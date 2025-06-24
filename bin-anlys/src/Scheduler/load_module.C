@@ -1504,7 +1504,7 @@ int LoadModule::dyninstAnalyzeRoutines(ProgScope *prog, const MiamiOptions *mo, 
     img_scope = new ImageScope(prog, img_name, img_id);
     if (rout->is_valid_for_analysis()) {
       ires = rout->main_analysis(img_scope, mo, patcher);
-      std::cout << "OZGURDYNINSTDBG::" << __func__ << ": " << __LINE__ << std::endl;
+      std::cout << "[LOG] inst " << __func__ << ": " << __LINE__ << std::endl;
       if (ires < 0) {
         fprintf(stderr, "Error while analyzing routine %s\n", rout->Name().c_str());
         if (mo->do_linemap)
